@@ -11,8 +11,8 @@ export class UsersController {
 
   @Post("/")
   @Returns(201, User)
-  save(@BodyParams() @Groups('creation')user: User) {
+  save(@BodyParams() @Groups("creation") user: User) {
     const model = new this.userModel(user);
-    return model.save()
+    return model.save();
   }
 }
